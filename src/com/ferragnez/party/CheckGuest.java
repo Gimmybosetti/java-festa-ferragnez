@@ -15,13 +15,20 @@ public class CheckGuest {
 		
 		System.out.println("Buonasera, mi spiace che anche lei sia alla festa delle persone peggiori del mondo...qual è il suo nome?");
 		nome = scan.nextLine();
-		System.out.println("\n");
+		System.out.print("\n");
 		
-		while(inLista == false && cursor < invitati.length) {
+		/*while(inLista == false && cursor < invitati.length) {   //implementazione con ciclo while
 			if (invitati[cursor].equals(nome)) {
 				inLista = true;
 			}
 			cursor++;
+		}*/
+		
+		for (cursor = 0; cursor < invitati.length; cursor++) {    //implementazione con ciclo for
+			if (invitati[cursor].equals(nome)) {
+				inLista = true;
+				break;
+			}
 		}
 		
 		if(inLista == true) {
